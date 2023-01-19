@@ -3,4 +3,4 @@
 Запуск программы через командную строку:
 
 
-python main.py --image img.jpg
+python main.py --image img1.jpg
