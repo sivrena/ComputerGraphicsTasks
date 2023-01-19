@@ -1,0 +1,4 @@
+icmplib==3.0.3
+numpy==1.24.1
+opencv-python==4.7.0.68
+scapy==2.5.0
