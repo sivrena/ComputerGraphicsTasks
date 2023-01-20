@@ -68,3 +68,19 @@ cv2.waitKey(0)
 erosion = cv2.erode(img, numpy.ones((5,5), numpy.uint8), iterations = 1)
 cv2.imshow("Erosed image", erosion)
 cv2.waitKey(0)
+
+#захват изображения с внешней камеры
+cap = cv2.VideoCapture(0)
+
+for i in range(30):
+    cap.read()
+
+ret, frame = cap.read()
+gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+cv2.imshow("Grayscale image from camera", gray)
+cv2.waitKey(0)
+mirror = cv2.flip(frame, 0)
+cv2.imshow("Mirrored image from camera", mirror)
+cv2.waitKey(0)
+
+cap.release()
